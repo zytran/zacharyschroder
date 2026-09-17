@@ -1,0 +1,79 @@
+:root {
+  --bg: #292929;
+  --ink: #e7e4dd;
+  --muted: #bebeb7;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --max-width: 920px;
+  --gutter: clamp(1.5rem, 5vw, 4rem);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 1.5rem var(--gutter);
+  margin: 0 auto;
+  background-color: #FFB612;
+  --ink: #030303;
+  --muted: #222120;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--ink);
+  justify-self: start;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.75rem;
+  justify-self: center;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--ink);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  width: 2.1rem;
+  height: 2.1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+}
+
+.theme-toggle:hover { border-color: var(--accent); }
+
